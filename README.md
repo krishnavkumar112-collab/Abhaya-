@@ -2,54 +2,46 @@
   <img src="./img.png" alt="Project Banner" width="100%">
 </p>
 
-# [Project Name] 🎯
-
-## Basic Details
-
-### Team Name: [Name]
-
-### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
+ABHAYA The SOS App
+Team Member; KRISHNA V KUMAR
 
 ### Hosted Project Link
-[mention your project hosted link here]
+
 
 ### Project Description
-[2-3 lines about what your project does]
+ABHAYA is a mobile safety application built with React Native and Expo. It is designed to provide women with a quick and reliable way to alert their family or authorities during emergencies by sharing their real-time GPS location.
 
-### The Problem statement
-[What problem are you solving?]
+ The Problem statement
+In emergency situations involving threats to personal safety, victims often face critical delays due to the inability to manually dial numbers or describe their precise location to rescuers. Existing mobile communication methods are frequently too slow or complex for high-stress scenarios, and a lack of real-time GPS integration can lead to confusion and failed rescue attempts. Furthermore, reliance on a single emergency contact increases the risk of the alert going unnoticed.
 
-### The Solution
-[How are you solving it?]
+ The Solution
+ABHAYA addresses these challenges by providing a one-tap SOS system that bypasses manual entry, automatically sharing live Google Maps coordinates with multiple trusted contacts simultaneously to ensure a faster and more reliable emergency response.
 
 ---
+ Technical Details
 
-## Technical Details
-
-### Technologies/Components Used
+Technologies/Components Used
 
 **For Software:**
-- Languages used: [e.g., JavaScript, Python, Java]
-- Frameworks used: [e.g., React, Django, Spring Boot]
-- Libraries used: [e.g., axios, pandas, JUnit]
-- Tools used: [e.g., VS Code, Git, Docker]
+- Languages used: JAVASCRIPT
+- Frameworks used: React Native (Expo SDK)
+-expo-location (for GPS tracking).
 
-**For Hardware:**
-- Main components: [List main components]
-- Specifications: [Technical specifications]
-- Tools required: [List tools needed]
+react-native-async-storage (for local data saving).
 
----
+react-native-linking (to trigger the SMS app). Libraries used: 
+-TOOLS USED ;VS CODE ,EXPO GO,GITHUB
 
 ## Features
 
 List the key features of your project:
-- Feature 1: [Description]
-- Feature 2: [Description]
-- Feature 3: [Description]
-- Feature 4: [Description]
+-One-Tap SOS: Send an emergency SMS to multiple contacts with a single click.
+
+-Live Location Sharing: Automatically fetches GPS coordinates and attaches a Google Maps link to the message.
+
+-Multiple Contact Management: Allows users to save a list of emergency contacts (using Array logic) instead of just one number.
+
+-Persistent Storage: Uses AsyncStorage to ensure that saved contacts remain in the app even after the phone is restarted.
 
 ---
 
@@ -59,45 +51,36 @@ List the key features of your project:
 
 #### Installation
 ```bash
-[Installation commands - e.g., npm install, pip install -r requirements.txt]
-```
+# Install the Expo CLI globally
+npm install -g expo-cli
 
-#### Run
-```bash
-[Run commands - e.g., npm start, python app.py]
-```
-
-### For Hardware:
-
-#### Components Required
-[List all components needed with specifications]
-
-#### Circuit Setup
-[Explain how to set up the circuit]
-
----
-
-## Project Documentation
-
+# Install project dependencies (Location, AsyncStorage, etc.)
+npm install
+RUN
+# Start the Expo development server
+npx expo start
+` 
 ### For Software:
 
 #### Screenshots (Add at least 3)
 
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+![WhatsApp Image 2026-02-14 at 10 48 09 AM (1)](https://github.com/user-attachments/assets/cb83a2d3-e2d7-4d7e-b75b-a56b150bb9db)
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
-
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
 
 #### Diagrams
 
 **System Architecture:**
 
-![Architecture Diagram](docs/architecture.png)
-*Explain your system architecture - components, data flow, tech stack interaction*
+The ABHAYA system architecture is designed as a client-side mobile application that bridges the gap between high-level user interface and low-level device hardware. It follows a layered approach to ensure reliability and speed during emergencies.
+
+1. Components
+User Interface (UI) Layer: Developed using React Native components, providing the SOS button and contact management screens.
+
+Logic Controller: The core JavaScript engine that handles button triggers, form validation for phone numbers, and coordinating background tasks.
+
+Hardware Abstraction Layer: The bridge (Expo SDK) that allows the JavaScript code to "talk" to the phone's physical sensors.
+
+Local Storage: The AsyncStorage module that keeps data on the device without needing a database server.
 
 **Application Workflow:**
 
